@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Private AI Knowledge Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            ✦ Knowledge Hub
+        </div>
+
+        <p class="tagline">
+            Your Private AI Workspace
+        </p>
+
+        <nav>
+
+            <button class="nav-btn active">
+                💬 Chat
+            </button>
+
+            <button class="nav-btn">
+                📚 Knowledge
+            </button>
+
+            <button class="nav-btn">
+                📄 Documents
+            </button>
+
+            <button class="nav-btn">
+                ⚙ Settings
+            </button>
+
+        </nav>
+
+        <div class="system">
+
+            <span class="dot"></span>
+
+            <div>
+                <b>System Online</b>
+                <small>Private workspace</small>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Private AI Assistant</h1>
+
+                <p>
+                    Ask questions from your knowledge base
+                </p>
+            </div>
+
+            <div class="model">
+                RAG • OLLAMA
+            </div>
+
+        </header>
+
+
+        <!-- STATS -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>📄</span>
+                <div>
+                    <small>Documents</small>
+                    <strong id="documentCount">0</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span>🧠</span>
+                <div>
+                    <small>Knowledge Chunks</small>
+                    <strong id="chunkCount">0</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span>⚡</span>
+                <div>
+                    <small>AI Status</small>
+                    <strong>Ready</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- UPLOAD -->
+
+        <section class="upload-card">
+
+            <div class="upload-icon">
+                ↑
+            </div>
+
+            <div class="upload-info">
+
+                <h2>Add Documents</h2>
+
+                <p>
+                    Upload your PDF or TXT files to build
+                    your private knowledge base.
+                </p>
+
+                <label class="file-button">
+
+                    Choose Document
+
+                    <input
+                        type="file"
+                        id="fileInput"
+                        accept=".pdf,.txt"
+                        hidden
+                    >
+
+                </label>
+
+                <span id="fileName">
+                    No file selected
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAT -->
+
+        <section class="chat">
+
+            <div class="chat-top">
+
+                <div>
+
+                    <h2>AI Conversation</h2>
+
+                    <p>
+                        Your private knowledge assistant
+                    </p>
+
+                </div>
+
+                <span class="online">
+                    ● Online
+                </span>
+
+            </div>
+
+
+            <div
+                id="chatBox"
+                class="chat-box">
+
+                <div class="message ai">
+
+                    <div class="avatar">
+                        AI
+                    </div>
+
+                    <div class="bubble">
+
+                        <b>Welcome! 👋</b>
+
+                        <br><br>
+
+                        I'm your Private AI Knowledge
+                        Assistant.
+
+                        <br><br>
+
+                        Upload a document and ask me
+                        a question about your knowledge.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INPUT -->
+
+            <div class="input-box">
+
+                <input
+                    type="text"
+                    id="question"
+                    placeholder="Ask your AI assistant..."
+                >
+
+                <button onclick="sendMessage()">
+                    Send ➤
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
